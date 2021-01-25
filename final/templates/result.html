@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <title>Add Caption for your Paintings</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered">
+    <img src="https://scontent-sea1-1.cdninstagram.com/v/t51.2885-19/s150x150/107537502_310632703675984_2551574531262309474_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_ohc=zUqTEUWuNgMAX-E8Vhn&tp=1&oh=540578f2ed9d6669a71ddb0b458dfe5d&oe=5FEC9B96" alt="Avatar woman">
+    <h2 style="font-family:cursive;">
+        Neha Agrawal
+    </h2>
+
+    <p>Hello everyone! I'm a Graduate student at Portland State University doing majors in Computer science.
+              When I'm not coding or breaking my head on assignments, you'll find me painting out my 
+              thoughts on Canvas board.</p>
+			  
+		<div class="black-line"></div>
+    <h3>
+        CONTACT ME
+    </h3>
+    <div class="row padding" id="inner_div">
+        <div class="icon social fb">
+            <a target="_blank" href="http://facebook.com/neha.agrawal26">
+            <i class="fab fa fa-facebook"></i></a>
+        </div>
+        <div class="icon social gh">
+            <a target="_blank" href="https://github.com/neha-psu" >
+            <i class="fab fa fa-github"></i></a>
+        </div>
+        <div class="icon social in">
+            <a target="_blank" href="mailto:agrawal@pdx.edu">
+              <i class="fab fa fa-envelope-o"></i></a>
+        </div>
+        <div class="icon social ln">
+            <a  href="">
+              <i class="fab fa fa-linkedin"></i></a>
+        </div> 
+        <div class="icon social insta">
+            <a target="_blank" href="https://www.instagram.com/agrawal.neha26/">
+              <i class="fab fa fa-instagram"></i></a>
+        </div>  
+    </div>
+  </div>
+</div>
+
+<div class="split right">
+
+<ul>
+  <li><a href="{{ url_for('index') }}">Home</a></li>
+  <li><a href="{{ url_for('result') }}">Results</a></li>
+  <li style="float:right"><a class="active" >Image-Caption-Bot</a></li>
+</ul>
+
+
+<div class ="jumbotron jumbotron-fluid bg-grey p-2 ">
+<div class="container w-50 mx-auto">
+    <div class="class bg-light text-dark md-3 mx-auto justify-content-center align-self-center">
+        <div class="card-body">
+            <img src="{{response['image_public_url']}}" class="img-fluid rounded mx-auto d-block"><br>
+            <p class="card-text text-muted">{{response['caption']}}.</p>
+            <p class="card-text">LABELS: {{response['label_descriptions']}}.</p>
+            <audio controls>
+                <source src="{{response['audio_public_url']}}" type="audio/mpeg">
+            </audio>
+        </div>
+        </div>
+    </div>
+
+</div>
+<footer style="text-align: center;">© 2020 Neha Agrawal</footer>
+</div>
+</body>
+</html>

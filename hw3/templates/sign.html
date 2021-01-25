@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="form_div">
+        <h4 id="sign_head">Enter Your information</h4>
+        <form action="{{ url_for('sign') }}" method=post>
+            <p class="heading">Name <input type=text class=form-control name=name >
+            <p class="heading">Email <input type=text class=form-control name=email >
+                
+            <p class="heading">Phone number <input type=number class=form-control name=phone>
+            <p class="heading">Address <input type=text class=form-control name=address >
+            <p class="heading">State <input type=text class=form-control name=state >
+            <p class="heading">Zip <input type=number class=form-control name=zip>
+            <p class="heading">Country <input type=text class=form-control name=country>
+            <p class="heading">Enter an amount in $USD <input type=number class=form-control name=amount>
+            <p class="heading">Leave a comment<br>
+            <textarea rows=5 cols = 30 class=form-control name=message></textarea><br>
+            <input type=submit value=Sign></p>
+        </form>
+    </div>
+
+{% endblock %}

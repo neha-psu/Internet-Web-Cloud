@@ -1,0 +1,181 @@
+body {
+  font-family: Arial;
+  color: white;
+}
+
+ /* split screen styling */
+.split {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  width: 25%;
+  left: 0;
+      background: linear-gradient(
+              to bottom,
+              #212529,
+               #17a2b8);
+  
+  color: white;
+}
+
+.left p{
+	font-style: italic;
+}
+.right {
+  width: 75%;
+  right: 0;
+  background-color: #212529;
+  
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 170px;
+  border-radius: 50%;
+}
+
+ /* Navbar styling */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #17a2b8;
+}
+.card-text{
+	color: grey;
+}
+
+ /* social links styling */
+.icon {
+	position:relative;
+	text-align:center;
+	width:0px;
+	height:0px;
+	padding:20px;
+	border-radius: 20px 20px 20px 20px;
+	color:#FFFFFF;
+}
+.icon i {
+	font-size:20px;
+	position:absolute;
+	left:19px;
+	top:10px;
+}
+.icon.social {
+	float:left;
+	margin:0 5px 0 0;
+	cursor:pointer;
+	background:white ;
+	color:#262626;
+	transition: 0.5s;
+}
+.icon.social:hover {
+	background:#262626 ;
+	color:#6d6e71;
+	transition: 0.5s;
+	filter: drop-shadow(0 1px 10px rgba(0,0,0,.8));	 	
+}
+.icon.social.fb i {
+	left:13px;
+	top:10px;
+}
+.icon.social.gh i {
+	left:11px;
+}
+.icon.social.in i {
+	left:11px;
+}
+.icon.social.ln i {
+	left:11px;
+}
+.icon.social.insta i {
+	left:11px;
+}
+.padding {
+    margin:20px auto;
+	width:240px;
+	
+}
+
+#inner_div{
+display: inline-block;
+}
+.black-line{
+	width:170px;
+	margin:90px auto 0;
+	margin-bottom: 10px;
+	border-bottom: 2px solid black;
+}
+footer{
+	color: grey;
+	padding-bottom: 10px;
+}
+
+.intro{
+    margin-top:40px;
+    text-align: center;
+    color: white;
+    	      background: linear-gradient(
+              to bottom,
+              #212529,
+               #17a2b8);
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.main-intro{
+    color: white;
+	margin: 10px 35px 10px 35px;
+	font-family:cursive;
+}
+.main-intro-sub{
+    color: grey;
+	margin: 10px 35px 10px 35px;
+	font-family:cursive;
+}
+
+.upload-photo-container{
+	      background: linear-gradient(
+              to right,
+              #212529,
+               #17a2b8);
+	color: white;
+	font-family:cursive;
+	padding: 20px;
+	font-size: 25px;
+	margin: 50px;
+}

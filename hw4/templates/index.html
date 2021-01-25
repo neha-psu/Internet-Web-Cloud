@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class ="donatepage" id>
+        
+        <h1  id="donate" >Let's fight hunger together!</h1>
+        <h3>To Donate, Enter your information here</h3>
+
+        <h3 ><a href="{{ url_for('sign') }}" id="donate">Donate</a></h3>
+        <img id="img0"src ="http://placekitten.com/408/287">
+        <h3>Thankyou for helping end the hunger:)</h3>
+    </div>
+
+        
+    <h2 id='donorlist'>Our Donors Information</h2>
+
+    <div id="wrap">
+        {% for entry in entries %}
+        <div class="box values">
+          <div class="innerContent entry">
+            {{ entry.name }} <br> &lt;{{ entry.email }}, {{entry.phone}}&gt;
+        <br>{{ entry.address }}, {{entry.state}}, {{entry.zip}}, {{entry.country}}<br>
+        Donated ${{entry.amount}}<br><br>
+	    {{ entry.message }}
+          </div>
+        </div>
+    
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+# We will use alpine with multi-stage building strategy
+
+# Use the Python version of alpine as the base image
+FROM python:alpine as base
+
+#In the first stage, we build the dependencies. For this set the base as the builder image
+FROM base as builder
+
+# create a directory insider container to install the dependencies
+RUN mkdir /install
+
+#Set the working directory of the container to /install
+WORKDIR /install
+
+# copy requirements.txt to / of the container
+COPY requirements.txt /requirements.txt
+
+# Install the Python packages specified by requirements.txt into the container directory /install and then remove the requirements.txt
+RUN pip install  --no-cache --prefix=/install -r /requirements.txt; rm /requirements.txt
+
+# In the second stage, we copy the dependencies installed in the previous stage inside /usr/local directory.
+FROM base
+COPY --from=builder /install /usr/local
+
+# Copy the contents of the current directory into the container directory /app
+COPY . /app
+
+# Set the working directory of the container to /app
+WORKDIR /app
+
+# Set the program that is invoked upon container instantiation
+ENTRYPOINT ["python"]
+
+# Set the parameters to the program
+CMD ["app.py"]

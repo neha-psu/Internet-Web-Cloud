@@ -1,0 +1,88 @@
+body{
+    background: linear-gradient(
+    to right,
+    #212529,
+    #17a2b8);
+    }
+    input{
+    padding : 10px;
+    font-family: "Helvetica", sans-serif; font-size: 20px; color: #008303;
+}
+.donatepage{
+    margin-top:40px;
+    text-align: center;
+    color: black;
+    background-color: floralwhite;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+#donorlist{
+    color:goldenrod;
+    font-size: bold;
+}
+.values{
+    color: rgb(224, 218, 218);
+}
+h1#donate{
+    color: rgb(94, 51, 51);
+}
+form{ 
+    margin:.1em auto;
+    padding:10px; 
+    width: 400px; 
+    border: 1px 
+ }
+.heading{ 
+    font-weight: bold; 
+}
+.entry{ 
+    margin-bottom: 2em; 
+    padding-bottom: 2em; 
+    border-bottom: 1px solid; 
+    color:white; 
+}
+.form_div{
+    background-color: white;
+    margin-top:40px;
+    padding:10px;
+  
+}
+label, button{
+    float:left;
+}
+h4{
+    font-family:helvetica;
+    padding-top: 20px;
+    TEXT-ALIGN: CENTER;
+}
+h4#sign_head{
+    font-weight: bolder;
+    font-size: 24px;
+}
+h3{
+    color: whitesmoke
+}
+
+a#donate{
+    color:goldenrod;
+}
+#wrap {
+    overflow: hidden;
+  }
+.box {
+width: 20%;
+padding-bottom: 20%;
+color: #FFF;
+position: relative;
+float: left;
+}
+.innerContent {
+position: absolute;
+text-align: center;
+left: 1px;
+right: 1px;
+top: 1px;
+bottom: 1px;
+background:rgba(0,0,0,.5);
+padding: 10px;
+}

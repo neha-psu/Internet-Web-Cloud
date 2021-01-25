@@ -1,0 +1,7 @@
+flask
+google-cloud-datastore
+gunicorn
+google-cloud-storage
+google-cloud-vision
+google-cloud-translate
+google-cloud-texttospeech
